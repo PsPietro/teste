@@ -1,235 +1,369 @@
-*, *::before, *::after {
+```css
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+*, 
+*::before, 
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-header {
-    position: relative;
+
+html {
     width: 100%;
-    height: 100px;
-    background-color: #800020; /* Azul escuro */
+    min-height: 100%;
 }
+
 body {
-    width: 100vw; 
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+
     background-image: url('../imagem/fundo.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
 }
-.dec{
-    top: 3px;
-    left: 30px;
-    width: 70px;
-    height: 70px;
-    z-index: 2;
+
+header {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #800020;
 }
+
+
+/* =========================================
+   DECORAÇÕES FIXAS
+========================================= */
+
 .dec {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 70px;
-    height: 70px;
+    top: 1.5%;
+    left: 1.5%;
+
+    width: clamp(50px, 5vw, 70px);
+    height: auto;
+
     z-index: 2;
     transform: rotate(90deg);
 }
+
 .vol {
     position: absolute;
-    bottom: 10px;
-    left: 10px;;
-    width: 80px;
-    height: 80px;
+    bottom: 2%;
+    left: 1.5%;
+
+    width: clamp(55px, 6vw, 80px);
+    height: auto;
+
     z-index: 2;
 }
-.escola{
+
+.escola {
     position: absolute;
-    top: 87px;
-    left: 180px;
-    font-size: 80px;
+    top: 9%;
+    left: 14%;
+
     transform: translate(-50%, -50%);
-    color:#44397a;
+
+    font-size: clamp(45px, 6vw, 80px);
+    color: #44397a;
     font-family: 'DM Serif Display', serif;
+
     z-index: 2;
 }
-.prato_dec{
-    width: 450px;
-    height: 450px;
-    right: -30px;
-    bottom: -15px;
+
+.prato_dec {
     position: absolute;
+
+    width: clamp(250px, 35vw, 450px);
+    height: auto;
+
+    right: -2%;
+    bottom: -2%;
+
+    max-width: 50vw;
 }
+
+
+/* =========================================
+   LOGIN DO ALUNO
+========================================= */
+
 .log1 {
     position: absolute;
+
     top: 30%;
     left: 15%;
+
     transform: translateY(-50%);
-    font-size: 40px;
-    color: rgb(3, 0, 194);
-    font-family: 'DM Serif Display', Arial, serif;
+
+    font-size: clamp(28px, 3vw, 40px);
+    color: #800020;
+
+    font-family: 'DM Serif Display', serif;
+    border-radius: 5px;
 }
+
 .log2 {
     position: absolute;
+
     top: 50%;
     left: 15%;
+
     transform: translateY(-50%);
-    font-size: 40px;
-    color: rgb(255, 0, 0);
-    font-family: 'Arial', sans-serif;
+
+    font-size: clamp(28px, 3vw, 40px);
+    color: #800020;
+
+    font-family: 'DM Serif Display', serif;
+    border-radius: 5px;
 }
+
 .input1 {
     position: absolute;
+
     top: 40%;
     left: 15%;
+
     transform: translateY(-50%);
-    width: 300px;
-    height: 50px;
+
+    width: min(30vw, 300px);
+    min-width: 220px;
+
+    height: clamp(45px, 5vw, 50px);
+
     padding: 10px;
-    font-size: 20px;
+
+    font-size: clamp(16px, 2vw, 20px);
+
     border: none;
-    background-color: #800020; /* Fundo azul */
-    color: #FFFFFF;
     border-radius: 10px;
+
+    background-color: #800020;
+    color: #FFFFFF;
 }
+
 .input1::placeholder {
-    color: #FFFFFF ;
+    color: #FFFFFF;
 }
+
 .input2 {
     position: absolute;
+
     top: 60%;
     left: 15%;
+
     transform: translateY(-50%);
-    width: 316px;
-    height: 50px;
+
+    width: min(32vw, 316px);
+    min-width: 220px;
+
+    height: clamp(45px, 5vw, 50px);
+
     padding: 10px;
-    font-size: 20px;
+
+    font-size: clamp(16px, 2vw, 20px);
+
     border: none;
-    background-color: #800020;   
-    color: #FFFFFF;
     border-radius: 10px;
+
+    background-color: #800020;
+    color: #FFFFFF;
 }
+
 .input2::placeholder {
     color: #FFFFFF;
 }
-.log1 {
-    color: #800020;              
-    border-radius: 5px;
-    font-family:'DM Serif Display', serif;
-}
-.log2 {
-    color: #800020;             
-    border-radius: 5px;
-    font-family:'DM Serif Display', serif;
-}
+
+
+/* =========================================
+   BOTÃO LOGIN ANTIGO
+========================================= */
+
 .login {
     position: absolute;
+
     top: 73%;
     left: 35%;
+
     transform: translateY(-50%);
-    width: 75px;
-    height: 75px;
+
+    width: clamp(60px, 7vw, 75px);
+    height: clamp(60px, 7vw, 75px);
+
     cursor: pointer;
-    background-color: blue;
+
+    background-color: #020080;
+
     border-radius: 50%;
-    font-family:'DM Serif Display', serif;
+
+    font-family: 'DM Serif Display', serif;
 }
+
+
+/* =========================================
+   COMANDO DE VOZ
+========================================= */
+
 .log3 {
     position: absolute;
+
     top: 92%;
     left: 8%;
+
     transform: translateY(-50%);
-    font-size: 40px;
-    color:#44397a;
-    font-family:'DM Serif Display', serif;
-}
-.input3 {
-    position: absolute;
-    top: 40%;
-    left: 15%;
-    transform: translateY(-50%);
-    width: 300px;
-    height: 50px;
-    padding: 10px;
-    font-size: 25px;
-    border: none;
-    background-color: #800020; /* Fundo azul */
-    color: white;
-    border-radius: 10px;
+
+    font-size: clamp(25px, 3vw, 40px);
+
+    color: #44397a;
+
     font-family: 'DM Serif Display', serif;
+
+    z-index: 2;
 }
-.input4 {
-    position: absolute;
-    top:50%;
-    left: 15%;
-    transform: translateY(-50%);
-    width: 300px;
-    height: 50px;
-    padding: 10px;
-    font-size: 25px;
-    border: none;
-    background-color: #800020;   /* Azul escuro */
-    color: white;
-    border-radius: 10px;
-    font-family: 'DM Serif Display', serif;
-}
+
+
+/* =========================================
+   CARDÁPIO
+========================================= */
+
+.input3,
+.input4,
 .input5 {
     position: absolute;
-    top: 60%;
+
     left: 15%;
+
     transform: translateY(-50%);
-    width: 300px;
-    height: 50px;
+
+    width: min(30vw, 300px);
+    min-width: 220px;
+
+    height: clamp(45px, 5vw, 50px);
+
     padding: 10px;
-    font-size: 25px;
+
+    font-size: clamp(18px, 2.5vw, 25px);
+
     border: none;
-     background-color: #800020;   /* Azul escuro */
-    color: white;
     border-radius: 10px;
+
+    background-color: #800020;
+    color: white;
+
     font-family: 'DM Serif Display', serif;
 }
-.log4 {
+
+.input3 {
+    top: 40%;
+}
+
+.input4 {
+    top: 50%;
+}
+
+.input5 {
+    top: 60%;
+}
+
+
+/* =========================================
+   BOTÕES DO CARDÁPIO
+========================================= */
+
+.log4,
+.log7 {
     position: absolute;
+
     top: 73%;
     left: 15%;
+
     transform: translateY(-50%);
-    font-size: 40px;
-    color:#fefdff;
-    font-family:'DM Serif Display', serif;
-    background-color: #020080; /* Fundo azul */
+
+    font-size: clamp(25px, 3vw, 40px);
+
+    color: #fefdff;
+
+    font-family: 'DM Serif Display', serif;
+
+    background-color: #020080;
+
+    border: none;
     border-radius: 10px;
-    height: 50px;
-    width: 150px;
+
+    height: clamp(45px, 6vw, 55px);
+
+    cursor: pointer;
 }
+
+.log4 {
+    width: clamp(120px, 15vw, 150px);
+}
+
+.log7 {
+    width: clamp(140px, 18vw, 180px);
+}
+
+
+/* =========================================
+   TABELA / LOGIN ADMINISTRATIVO
+========================================= */
+
 .tabela {
     position: absolute;
+
     top: 50%;
     left: 35%;
+
     transform: translate(-50%, -50%);
-    width: 448px;
-    height: 412px;
+
+    width: min(90%, 448px);
+    min-height: 412px;
+
     background-color: #ffffff;
+
     border-radius: 25px;
-    padding: 42px 40px;
+
+    padding: clamp(25px, 4vw, 42px) clamp(20px, 4vw, 40px);
+
     font-family: Arial, sans-serif;
+
     color: #44397a;
+
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.12);
 }
 
 .tabela .escola1 {
     position: static;
+
     transform: none;
+
     margin: 0;
+
     text-align: center;
-    font-size: 36px;
+
+    font-size: clamp(28px, 4vw, 36px);
+
     line-height: 42px;
+
     color: #302d72;
+
     font-family: Georgia, 'Times New Roman', serif;
+
     font-weight: bold;
 }
 
-.dec1{
+.dec1 {
     position: absolute;
+
     height: 30px;
     width: 30px;
+
     top: 13%;
     left: 65%;
 }
@@ -237,18 +371,26 @@ body {
 .tabela .painel {
     margin-top: 5px;
     margin-bottom: 35px;
+
     text-align: center;
+
     font-size: 16px;
+
     color: #44397a;
 }
 
 .tabela .log5,
 .tabela .log6 {
     position: static;
+
     transform: none;
+
     margin: 0 0 6px 0;
+
     font-size: 14px;
+
     color: #302d72;
+
     font-family: Arial, sans-serif;
 }
 
@@ -259,14 +401,21 @@ body {
 .tabela .email,
 .tabela .senha {
     display: block;
+
     width: 100%;
     height: 50px;
+
     padding: 10px 14px;
+
     font-size: 16px;
+
     background-color: #ffffff;
     color: #302d72;
+
     border: 1px solid #ddd3df;
+
     border-radius: 12px;
+
     outline: none;
 }
 
@@ -277,222 +426,603 @@ body {
 
 .tabela .entrar {
     display: block;
+
     width: 100%;
     height: 48px;
+
     margin-top: 16px;
+
     border: none;
     border-radius: 12px;
+
     background-color: #343078;
+
     color: white;
+
     font-size: 16px;
     font-weight: bold;
-    cursor: pointer;
-}
-.log7 {
-    position: absolute;
-    top: 73%;
-    left: 15%;
-    transform: translateY(-50%);
-    font-size: 40px;
-    color:#fefdff;
-    font-family:'DM Serif Display', serif;
-    background-color: #020080; /* Fundo azul */
-    border-radius: 10px;
-    height: 50px;
-    width: 180px;
-}
-#login {
-    position: absolute;
-    top: 73%;
-    left: 35%;
-    transform: translateY(-50%);
-    width: 75px;
-    height: 75px;
-    padding: 0;
-    border: none;
-    border-radius: 50%;
-    background-color: #020080;
-    cursor: pointer;
-}
-/* IMAGEM DA SETA */
-.seta {
-    width: 75px;
-    height: 75px;
-    display: block;
-    border-radius: 50%;
-    background-color: #020080;
-    top: 75%;
-    left: 35%;
-}
-#mensagem {
-    position: absolute;
-    top: 82%;
-    left: 15%;
-    width: 500px;
-    font-size: 22px;
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    color: #800020;
-}
-.seta-button {
-    position: absolute;
-    top: 73%;
-    left: 35%;
-    transform: translateY(-50%);
-    width: 75px;
-    height: 75px;
-    padding: 0;
-    border: none;
-    border-radius: 50%;
-    background-color: #020080;
+
     cursor: pointer;
 }
 
-/* Parte do Bruno */
+
+/* =========================================
+   BOTÃO DA SETA
+========================================= */
+
+#login {
+    position: absolute;
+
+    top: 73%;
+    left: 35%;
+
+    transform: translateY(-50%);
+
+    width: clamp(60px, 7vw, 75px);
+    height: clamp(60px, 7vw, 75px);
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: #020080;
+
+    cursor: pointer;
+}
+
+.seta {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    border-radius: 50%;
+}
+
+.seta-button {
+    position: absolute;
+
+    top: 73%;
+    left: 35%;
+
+    transform: translateY(-50%);
+
+    width: clamp(60px, 7vw, 75px);
+    height: clamp(60px, 7vw, 75px);
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: #020080;
+
+    cursor: pointer;
+}
+
+#mensagem {
+    position: absolute;
+
+    top: 82%;
+    left: 15%;
+
+    width: min(50vw, 500px);
+
+    font-size: clamp(16px, 2vw, 22px);
+
+    font-family: Arial, sans-serif;
+
+    font-weight: bold;
+
+    color: #800020;
+}
+
+
+/* =========================================
+   CONFIRMAÇÃO
+========================================= */
+
 .confirmar {
     position: absolute;
+
     top: 13%;
     left: 15%;
+
     transform: translate(25%, 25%);
-    font-size: 60px;
-    color:#800020;
+
+    font-size: clamp(38px, 5vw, 60px);
+
+    color: #800020;
+
     font-family: 'DM Serif Display', serif;
+
     z-index: 2;
 }
+
 .confirmar2 {
     position: absolute;
+
     top: 23%;
     left: 35%;
+
     transform: translate(25%, 25%);
-    font-size: 60px;
-    color:#800020;
+
+    font-size: clamp(38px, 5vw, 60px);
+
+    color: #800020;
+
     font-family: 'DM Serif Display', serif;
+
     z-index: 2;
 }
+
 .subconfirmar {
     position: absolute;
+
     top: 40%;
     left: 25%;
+
     transform: translate(20%, 25%);
-    font-size: 28px;
+
+    font-size: clamp(20px, 3vw, 28px);
+
     font-weight: bold;
-    color:#2c254f;
+
+    color: #2c254f;
+
     font-family: 'DM Serif Display', serif;
+
     z-index: 2;
 }
+
 .subconfirmar2 {
     position: absolute;
+
     top: 44%;
     left: 35%;
+
     transform: translate(20%, 25%);
-    font-size: 28px;
+
+    font-size: clamp(20px, 3vw, 28px);
+
     font-weight: bold;
-    color:#2c254f;
+
+    color: #2c254f;
+
     font-family: 'DM Serif Display', serif;
+
     z-index: 2;
 }
+
 .botao_confirmar {
     position: absolute;
+
     top: 55%;
     left: 32%;
-    transform: translate(20%, -40);
-    font-size: 28px;
+
+    transform: translate(20%, -40%);
+
+    font-size: clamp(20px, 3vw, 28px);
+
     font-weight: bold;
-    color:#efe4e4;
-    background-color:#44397a;
+
+    color: #efe4e4;
+
+    background-color: #44397a;
+
+    border: none;
+
     border-radius: 25px;
-    width: 400px;
-    height: 60px;
-    padding: 100px 10x;
+
+    width: min(45vw, 400px);
+    min-width: 250px;
+
+    height: clamp(55px, 7vw, 65px);
+
+    padding: 10px;
+
     font-family: 'DM Serif Display', serif;
+
     z-index: 2;
+
+    cursor: pointer;
 }
+
+
+/* =========================================
+   FINALIZAÇÃO
+========================================= */
+
 .finalizar {
     position: absolute;
+
     top: 24%;
-    left: -7%;
+    left: 5%;
+
     transform: translate(25%, 25%);
-    font-size: 52px;
+
+    font-size: clamp(32px, 5vw, 52px);
+
     font-weight: bold;
-    color:#800020;
+
+    color: #800020;
+
     font-family: 'DM Serif Display', serif;
+
     z-index: 2;
 }
+
 .finalizar_botao {
     position: absolute;
+
     top: 38%;
-    left: -0.05%;
+    left: 5%;
+
     transform: translate(20%, 25%);
-    font-size: 45px;
+
+    font-size: clamp(25px, 4vw, 45px);
+
     font-weight: bold;
-    color:#FFFFFF;
-    background-color:#2c254f;
+
+    color: #FFFFFF;
+
+    background-color: #2c254f;
+
+    border: none;
+
     border-radius: 39px;
-    padding: 22px 80px;
+
+    padding: clamp(15px, 2vw, 22px) clamp(30px, 6vw, 80px);
+
     font-family: 'DM Serif Display', serif;
+
     z-index: 2;
+
+    cursor: pointer;
+
+    max-width: 80vw;
 }
+
 .finalizar2 {
     position: absolute;
+
     top: 59%;
-    left: -6.3%;
+    left: 5%;
+
     transform: translate(25%, 25%);
-    font-size: 52px;
+
+    font-size: clamp(32px, 5vw, 52px);
+
     font-weight: bold;
-    color:#800020;
+
+    color: #800020;
+
     font-family: 'DM Serif Display', serif;
+
     z-index: 2;
 }
-/* Parte da Isabela */
+
+
+/* =========================================
+   ESCOLHA DE TURNO
+========================================= */
+
 .turno {
     position: absolute;
+
     top: 26%;
     left: 4%;
+
     transform: translate(20%, -40%);
-    font-size: 70px;
-    color:#800020;
+
+    font-size: clamp(42px, 7vw, 70px);
+
+    color: #800020;
+
     font-family: 'DM Serif Display', serif;
+
     z-index: 2;
 }
-.Manha {
-    position: absolute;
-    top: 40%;
-    left: 8%;
-    font-size: 35px;
-    transform: translate(20%, -40%);
-    color: #efe4e4;
-    font-family: 'DM Serif Display', serif;
-    z-index: 2;
-    width: 200px;
-    height: 70px;
-    border-radius: 65px;
-    background-color: #800020;
-}
-.Tarde {
-    position: absolute;
-    top: 53%;
-    left: 8%;
-    font-size: 35px;
-    transform: translate(20%, -40%);
-    color: #efe4e4;
-    font-family: 'DM Serif Display', serif;
-    z-index: 2;
-    width: 200px;
-    height: 70px;
-    border-radius: 65px;
-    background-color: #44397a;
-}
+
+.Manha,
+.Tarde,
 .Noite {
     position: absolute;
-    top: 65%;
+
     left: 8%;
-    font-size: 35px;
+
+    font-size: clamp(25px, 4vw, 35px);
+
     transform: translate(20%, -40%);
+
     color: #efe4e4;
+
     font-family: 'DM Serif Display', serif;
+
     z-index: 2;
-    width: 200px;
-    height: 70px;
+
+    width: clamp(160px, 20vw, 200px);
+
+    height: clamp(60px, 8vw, 70px);
+
+    border: none;
+
     border-radius: 65px;
+
+    cursor: pointer;
+}
+
+.Manha {
+    top: 40%;
     background-color: #800020;
 }
+
+.Tarde {
+    top: 53%;
+    background-color: #44397a;
+}
+
+.Noite {
+    top: 65%;
+    background-color: #800020;
+}
+
+
+/* =========================================
+   EFEITOS NOS BOTÕES
+========================================= */
+
+button {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================================
+   TABLETS
+========================================= */
+
+@media (max-width: 1024px) {
+
+    .prato_dec {
+        width: 35vw;
+        max-width: 380px;
+    }
+
+    .escola {
+        left: 17%;
+    }
+
+    .confirmar {
+        left: 10%;
+    }
+
+    .confirmar2 {
+        left: 30%;
+    }
+
+}
+
+
+/* =========================================
+   TABLETS MENORES / CELULARES GRANDES
+========================================= */
+
+@media (max-width: 768px) {
+
+    body {
+        min-height: 100vh;
+    }
+
+    .prato_dec {
+        width: 45vw;
+        right: -5%;
+    }
+
+    .escola {
+        top: 8%;
+        left: 20%;
+    }
+
+    .log1,
+    .log2,
+    .input1,
+    .input2,
+    .input3,
+    .input4,
+    .input5,
+    .log4,
+    .log7 {
+        left: 10%;
+    }
+
+    .input1,
+    .input2,
+    .input3,
+    .input4,
+    .input5 {
+        width: 45vw;
+    }
+
+    .seta-button,
+    #login {
+        left: 65%;
+    }
+
+    .confirmar {
+        left: 5%;
+        top: 15%;
+    }
+
+    .confirmar2 {
+        left: 20%;
+        top: 25%;
+    }
+
+    .subconfirmar {
+        left: 8%;
+        top: 40%;
+    }
+
+    .subconfirmar2 {
+        left: 15%;
+        top: 47%;
+    }
+
+    .botao_confirmar {
+        left: 20%;
+        top: 60%;
+    }
+
+    .finalizar {
+        left: 3%;
+        top: 22%;
+    }
+
+    .finalizar_botao {
+        left: 3%;
+        top: 40%;
+    }
+
+    .finalizar2 {
+        left: 3%;
+        top: 60%;
+    }
+
+}
+
+
+/* =========================================
+   CELULARES
+========================================= */
+
+@media (max-width: 480px) {
+
+    .dec {
+        top: 10px;
+        left: 10px;
+    }
+
+    .vol {
+        width: 50px;
+        height: auto;
+    }
+
+    .escola {
+        top: 7%;
+        left: 28%;
+    }
+
+    .prato_dec {
+        width: 55vw;
+        opacity: 0.9;
+    }
+
+    .log1 {
+        top: 30%;
+        left: 8%;
+    }
+
+    .input1 {
+        top: 40%;
+        left: 8%;
+        width: 70vw;
+    }
+
+    .log2 {
+        top: 52%;
+        left: 8%;
+    }
+
+    .input2 {
+        top: 62%;
+        left: 8%;
+        width: 70vw;
+    }
+
+    .seta-button {
+        top: 75%;
+        left: 70%;
+    }
+
+    .log3 {
+        left: 5%;
+        font-size: 22px;
+    }
+
+    .turno {
+        top: 25%;
+        left: 5%;
+        font-size: 38px;
+    }
+
+    .Manha,
+    .Tarde,
+    .Noite {
+        left: 10%;
+        width: 60vw;
+    }
+
+    .confirmar,
+    .confirmar2 {
+        left: 5%;
+        transform: none;
+        text-align: center;
+    }
+
+    .confirmar {
+        top: 15%;
+    }
+
+    .confirmar2 {
+        top: 25%;
+    }
+
+    .subconfirmar,
+    .subconfirmar2 {
+        left: 5%;
+        width: 85%;
+        transform: none;
+        text-align: center;
+    }
+
+    .botao_confirmar {
+        left: 10%;
+        width: 80%;
+        min-width: auto;
+        transform: none;
+    }
+
+    .finalizar {
+        left: 5%;
+        width: 90%;
+        transform: none;
+        text-align: center;
+    }
+
+    .finalizar_botao {
+        left: 5%;
+        width: 90%;
+        transform: none;
+        padding: 20px;
+    }
+
+    .finalizar2 {
+        left: 5%;
+        width: 90%;
+        transform: none;
+        text-align: center;
+    }
+
+}
+```
