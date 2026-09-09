@@ -1,9 +1,6 @@
-```css
-/* =========================================
-   CONFIGURAÇÕES GERAIS
-========================================= */
-
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,467 +9,459 @@
 html,
 body {
     width: 100%;
-    height: 100%;
-    overflow: hidden;
+    min-height: 100%;
 }
 
 body {
     position: relative;
     width: 100vw;
     height: 100vh;
-
+    min-height: 100vh;
+    overflow: hidden;
     background-image: url('../imagem/fundo.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    font-family: Arial, sans-serif;
 }
 
-header {
-    position: relative;
-    width: 100%;
-    height: 12vh;
-    background-color: #800020;
-}
-
-
-/* =========================================
-   DECORAÇÕES
-========================================= */
+/* Elementos decorativos */
 
 .dec {
     position: absolute;
-    top: 1.5vh;
-    left: 1.5vw;
-
-    width: 5.5vw;
-    max-width: 70px;
-
-    height: auto;
-
+    top: 12px;
+    left: 18px;
+    width: 70px;
+    height: 70px;
     z-index: 2;
     transform: rotate(90deg);
 }
 
 .vol {
     position: absolute;
-    bottom: 2vh;
-    left: 1.5vw;
-
-    width: 6vw;
-    max-width: 80px;
-
-    height: auto;
-
+    bottom: 12px;
+    left: 18px;
+    width: 70px;
+    height: 70px;
     z-index: 2;
 }
 
 .escola {
     position: absolute;
-    top: 8vh;
-    left: 14vw;
-
-    transform: translate(-50%, -50%);
-
-    font-size: 5.5vw;
+    top: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: clamp(52px, 9vw, 80px);
+    line-height: 1;
     color: #44397a;
-
-    font-family: 'DM Serif Display', serif;
-
+    font-family: 'DM Serif Display', Georgia, serif;
     z-index: 2;
 }
 
 .prato_dec {
     position: absolute;
-
-    width: 35vw;
-    max-width: 450px;
-
-    height: auto;
-
-    right: -2vw;
-    bottom: -2vh;
-
+    width: 390px;
+    height: 390px;
+    right: -35px;
+    bottom: -25px;
     z-index: 1;
 }
 
-
-/* =========================================
-   LOGIN DO ALUNO
-========================================= */
-
-.log1 {
-    position: absolute;
-
-    top: 30vh;
-    left: 15vw;
-
-    transform: translateY(-50%);
-
-    font-size: 3vw;
-    color: #800020;
-
-    font-family: 'DM Serif Display', serif;
-}
-
-.log2 {
-    position: absolute;
-
-    top: 50vh;
-    left: 15vw;
-
-    transform: translateY(-50%);
-
-    font-size: 3vw;
-    color: #800020;
-
-    font-family: 'DM Serif Display', serif;
-}
-
-.input1 {
-    position: absolute;
-
-    top: 40vh;
-    left: 15vw;
-
-    transform: translateY(-50%);
-
-    width: 28vw;
-    height: 7vh;
-
-    padding: 1vh 1vw;
-
-    font-size: 1.8vw;
-
-    border: none;
-    border-radius: 10px;
-
-    background-color: #800020;
-    color: #FFFFFF;
-}
-
-.input1::placeholder {
-    color: #FFFFFF;
-}
-
-.input2 {
-    position: absolute;
-
-    top: 60vh;
-    left: 15vw;
-
-    transform: translateY(-50%);
-
-    width: 28vw;
-    height: 7vh;
-
-    padding: 1vh 1vw;
-
-    font-size: 1.8vw;
-
-    border: none;
-    border-radius: 10px;
-
-    background-color: #800020;
-    color: #FFFFFF;
-}
-
-.input2::placeholder {
-    color: #FFFFFF;
-}
-
-
-/* =========================================
-   BOTÃO LOGIN
-========================================= */
-
-.login {
-    position: absolute;
-
-    top: 73vh;
-    left: 35vw;
-
-    transform: translateY(-50%);
-
-    width: 7vw;
-    height: 7vw;
-
-    max-width: 75px;
-    max-height: 75px;
-
-    cursor: pointer;
-
-    background-color: #020080;
-
-    border-radius: 50%;
-
-    font-family: 'DM Serif Display', serif;
-}
-
-
-/* =========================================
-   COMANDO DE VOZ
-========================================= */
+/* Comando de voz */
 
 .log3 {
     position: absolute;
-
-    top: 92vh;
-    left: 8vw;
-
-    transform: translateY(-50%);
-
-    font-size: 3vw;
-
+    left: 8%;
+    bottom: 4%;
+    font-size: clamp(24px, 4vw, 40px);
+    line-height: 1;
     color: #44397a;
+    font-family: 'DM Serif Display', Georgia, serif;
+    z-index: 3;
+}
 
-    font-family: 'DM Serif Display', serif;
+/* Login */
 
+.log1,
+.log2 {
+    position: absolute;
+    left: 15%;
+    transform: translateY(-50%);
+    font-size: clamp(30px, 5vw, 40px);
+    line-height: 1;
+    color: #800020;
+    font-family: 'DM Serif Display', Georgia, serif;
     z-index: 2;
 }
 
+.log1 {
+    top: 30%;
+}
 
-/* =========================================
-   CARDÁPIO
-========================================= */
+.log2 {
+    top: 50%;
+}
+
+.input1,
+.input2 {
+    position: absolute;
+    left: 15%;
+    transform: translateY(-50%);
+    width: 316px;
+    height: 54px;
+    padding: 10px 14px;
+    font-size: 20px;
+    border: none;
+    background-color: #800020;
+    color: #ffffff;
+    border-radius: 10px;
+    outline: none;
+    z-index: 2;
+}
+
+.input1 {
+    top: 40%;
+}
+
+.input2 {
+    top: 60%;
+}
+
+.input1::placeholder,
+.input2::placeholder {
+    color: #ffffff;
+}
+
+.seta-button {
+    position: absolute;
+    top: 73%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    width: 75px;
+    height: 75px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #020080;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.seta {
+    display: block;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+#mensagem {
+    position: absolute;
+    top: 82%;
+    left: 15%;
+    width: 500px;
+    max-width: 65%;
+    font-size: 22px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #800020;
+    z-index: 3;
+}
+
+/* Cardápio */
+
+.input3,
+.input4,
+.input5 {
+    position: absolute;
+    left: 15%;
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    font-size: 25px;
+    line-height: 30px;
+    border: none;
+    background-color: #800020;
+    color: #ffffff;
+    border-radius: 10px;
+    font-family: 'DM Serif Display', Georgia, serif;
+    z-index: 2;
+}
 
 .input3 {
-    position: absolute;
-
-    top: 40vh;
-    left: 15vw;
-
+    top: 40%;
     transform: translateY(-50%);
-
-    width: 28vw;
-    height: 7vh;
-
-    padding: 1vh 1vw;
-
-    font-size: 2vw;
-
-    border: none;
-    border-radius: 10px;
-
-    background-color: #800020;
-    color: white;
-
-    font-family: 'DM Serif Display', serif;
 }
 
 .input4 {
-    position: absolute;
-
-    top: 52vh;
-    left: 15vw;
-
+    top: 50%;
     transform: translateY(-50%);
-
-    width: 28vw;
-    height: 7vh;
-
-    padding: 1vh 1vw;
-
-    font-size: 2vw;
-
-    border: none;
-    border-radius: 10px;
-
-    background-color: #800020;
-    color: white;
-
-    font-family: 'DM Serif Display', serif;
 }
 
 .input5 {
-    position: absolute;
-
-    top: 64vh;
-    left: 15vw;
-
+    top: 60%;
     transform: translateY(-50%);
-
-    width: 28vw;
-    height: 7vh;
-
-    padding: 1vh 1vw;
-
-    font-size: 2vw;
-
-    border: none;
-    border-radius: 10px;
-
-    background-color: #800020;
-    color: white;
-
-    font-family: 'DM Serif Display', serif;
 }
 
-
-/* =========================================
-   BOTÃO LOGIN DO CARDÁPIO
-========================================= */
-
-.log4 {
-    position: absolute;
-
-    top: 78vh;
-    left: 15vw;
-
-    transform: translateY(-50%);
-
-    font-size: 2.8vw;
-
-    color: #fefdff;
-
-    font-family: 'DM Serif Display', serif;
-
-    background-color: #020080;
-
-    border: none;
-    border-radius: 10px;
-
-    height: 7vh;
-    width: 15vw;
-
-    cursor: pointer;
-}
-
-
-/* =========================================
-   BOTÃO CONTINUAR
-========================================= */
-
+.log4,
 .log7 {
     position: absolute;
-
-    top: 78vh;
-    left: 15vw;
-
+    top: 73%;
+    left: 15%;
     transform: translateY(-50%);
-
-    font-size: 2.8vw;
-
-    color: #fefdff;
-
-    font-family: 'DM Serif Display', serif;
-
-    background-color: #020080;
-
+    height: 55px;
     border: none;
     border-radius: 10px;
-
-    height: 7vh;
-    width: 18vw;
-
+    color: #ffffff;
+    background-color: #020080;
+    font-size: 30px;
+    font-family: 'DM Serif Display', Georgia, serif;
     cursor: pointer;
+    z-index: 3;
 }
 
+.log4 {
+    width: 150px;
+}
 
-/* =========================================
-   TABELA / PAINEL
-========================================= */
+.log7 {
+    width: 180px;
+}
+
+/* Confirmação */
+
+.confirmar,
+.confirmar2 {
+    position: absolute;
+    left: 15%;
+    color: #800020;
+    font-family: 'DM Serif Display', Georgia, serif;
+    line-height: 1.05;
+    z-index: 2;
+}
+
+.confirmar {
+    top: 18%;
+    font-size: clamp(42px, 7vw, 60px);
+}
+
+.confirmar2 {
+    top: 27%;
+    left: 35%;
+    font-size: clamp(42px, 7vw, 60px);
+}
+
+.subconfirmar,
+.subconfirmar2 {
+    position: absolute;
+    color: #2c254f;
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: clamp(22px, 3.5vw, 28px);
+    font-weight: bold;
+    line-height: 1.2;
+    z-index: 2;
+}
+
+.subconfirmar {
+    top: 40%;
+    left: 25%;
+}
+
+.subconfirmar2 {
+    top: 44%;
+    left: 35%;
+}
+
+.botao_confirmar {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    max-width: 70%;
+    min-height: 60px;
+    padding: 12px 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #efe4e4;
+    background-color: #44397a;
+    font-family: 'DM Serif Display', Georgia, serif;
+    cursor: pointer;
+    z-index: 3;
+}
+
+/* Finalização */
+
+.finalizar {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+    font-size: clamp(40px, 6.5vw, 52px);
+    font-weight: bold;
+    line-height: 1.15;
+    color: #800020;
+    font-family: 'DM Serif Display', Georgia, serif;
+    z-index: 2;
+}
+
+.finalizar_botao {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    max-width: 82%;
+    min-height: 75px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 39px;
+    font-size: clamp(28px, 5vw, 45px);
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #2c254f;
+    font-family: 'DM Serif Display', Georgia, serif;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.finalizar2 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+    font-size: clamp(36px, 6.5vw, 52px);
+    font-weight: bold;
+    line-height: 1.15;
+    color: #800020;
+    font-family: 'DM Serif Display', Georgia, serif;
+    z-index: 2;
+}
+
+/* Turno */
+
+.turno {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+    font-size: clamp(48px, 8vw, 70px);
+    line-height: 1;
+    color: #800020;
+    font-family: 'DM Serif Display', Georgia, serif;
+    z-index: 2;
+}
+
+.Manha,
+.Tarde,
+.Noite {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 260px;
+    height: 75px;
+    border: none;
+    border-radius: 65px;
+    color: #efe4e4;
+    font-size: 35px;
+    font-family: 'DM Serif Display', Georgia, serif;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.Manha {
+    top: 40%;
+    background-color: #800020;
+}
+
+.Tarde {
+    top: 53%;
+    background-color: #44397a;
+}
+
+.Noite {
+    top: 66%;
+    background-color: #800020;
+}
+
+/* Tela administrativa, caso use essas classes no mesmo CSS */
 
 .tabela {
     position: absolute;
-
     top: 50%;
-    left: 35%;
-
+    left: 50%;
     transform: translate(-50%, -50%);
-
-    width: 35vw;
-    max-width: 448px;
-
-    min-height: 55vh;
-
+    width: 448px;
+    max-width: 85%;
+    min-height: 412px;
     background-color: #ffffff;
-
     border-radius: 25px;
-
-    padding: 4vh 3vw;
-
+    padding: 42px 40px;
     font-family: Arial, sans-serif;
     color: #44397a;
-
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.12);
 }
 
 .tabela .escola1 {
     position: static;
-
     transform: none;
-
     margin: 0;
-
     text-align: center;
-
-    font-size: 3vw;
-
+    font-size: 36px;
+    line-height: 42px;
     color: #302d72;
-
     font-family: Georgia, 'Times New Roman', serif;
-
     font-weight: bold;
 }
 
 .dec1 {
     position: absolute;
-
-    width: 3vw;
-    height: auto;
-
-    top: 13vh;
-    left: 65vw;
+    height: 30px;
+    width: 30px;
+    top: 13%;
+    left: 65%;
 }
 
 .tabela .painel {
-    margin-top: 1vh;
-    margin-bottom: 4vh;
-
+    margin-top: 5px;
+    margin-bottom: 35px;
     text-align: center;
-
-    font-size: 1.3vw;
-
+    font-size: 16px;
     color: #44397a;
 }
 
 .tabela .log5,
 .tabela .log6 {
     position: static;
-
     transform: none;
-
-    margin: 0 0 1vh 0;
-
-    font-size: 1.2vw;
-
+    margin: 0 0 6px 0;
+    font-size: 14px;
     color: #302d72;
-
     font-family: Arial, sans-serif;
 }
 
 .tabela .log6 {
-    margin-top: 2vh;
+    margin-top: 17px;
 }
 
 .tabela .email,
 .tabela .senha {
     display: block;
-
     width: 100%;
-    height: 6vh;
-
-    padding: 1vh 1vw;
-
-    font-size: 1.3vw;
-
+    height: 50px;
+    padding: 10px 14px;
+    font-size: 16px;
     background-color: #ffffff;
     color: #302d72;
-
     border: 1px solid #ddd3df;
-
     border-radius: 12px;
-
     outline: none;
 }
 
@@ -483,380 +472,109 @@ header {
 
 .tabela .entrar {
     display: block;
-
     width: 100%;
-    height: 6vh;
-
-    margin-top: 2vh;
-
+    height: 48px;
+    margin-top: 16px;
     border: none;
     border-radius: 12px;
-
     background-color: #343078;
-
-    color: white;
-
-    font-size: 1.3vw;
+    color: #ffffff;
+    font-size: 16px;
     font-weight: bold;
-
     cursor: pointer;
 }
 
+/* Ajustes específicos para 800x1280 */
 
-/* =========================================
-   SETA
-========================================= */
+@media (max-width: 800px) {
+    .prato_dec {
+        width: 330px;
+        height: 330px;
+        right: -45px;
+        bottom: -20px;
+    }
 
-#login {
-    position: absolute;
+    .log3 {
+        left: 6%;
+        bottom: 3%;
+        font-size: 28px;
+    }
 
-    top: 73vh;
-    left: 35vw;
+    .input1,
+    .input2 {
+        width: 330px;
+        max-width: 70%;
+    }
 
-    transform: translateY(-50%);
+    .seta-button {
+        left: 42%;
+    }
 
-    width: 7vw;
-    height: 7vw;
+    #mensagem {
+        width: 60%;
+        max-width: 60%;
+        font-size: 18px;
+    }
 
-    max-width: 75px;
-    max-height: 75px;
+    .input3,
+    .input4,
+    .input5 {
+        width: 330px;
+        max-width: 70%;
+    }
 
-    padding: 0;
+    .confirmar {
+        left: 10%;
+        width: 80%;
+        text-align: center;
+    }
 
-    border: none;
-    border-radius: 50%;
+    .confirmar2 {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        text-align: center;
+    }
 
-    background-color: #020080;
+    .subconfirmar,
+    .subconfirmar2 {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        text-align: center;
+    }
 
-    cursor: pointer;
+    .subconfirmar2 {
+        top: 46%;
+    }
+
+    .botao_confirmar {
+        width: 70%;
+    }
+
+    .finalizar_botao {
+        width: 80%;
+    }
 }
 
-.seta-button {
-    position: absolute;
+@media (max-height: 1100px) {
+    .escola {
+        top: 8%;
+    }
 
-    top: 73vh;
-    left: 35vw;
+    .turno {
+        top: 23%;
+    }
 
-    transform: translateY(-50%);
+    .Manha {
+        top: 38%;
+    }
 
-    width: 7vw;
-    height: 7vw;
+    .Tarde {
+        top: 51%;
+    }
 
-    max-width: 75px;
-    max-height: 75px;
-
-    padding: 0;
-
-    border: none;
-    border-radius: 50%;
-
-    background-color: #020080;
-
-    cursor: pointer;
+    .Noite {
+        top: 64%;
+    }
 }
-
-.seta {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    border-radius: 50%;
-}
-
-
-/* =========================================
-   MENSAGEM
-========================================= */
-
-#mensagem {
-    position: absolute;
-
-    top: 82vh;
-    left: 15vw;
-
-    width: 40vw;
-
-    font-size: 1.8vw;
-
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-
-    color: #800020;
-}
-
-
-/* =========================================
-   CONFIRMAÇÃO
-========================================= */
-
-.confirmar {
-    position: absolute;
-
-    top: 18vh;
-    left: 12vw;
-
-    font-size: 4.5vw;
-
-    color: #800020;
-
-    font-family: 'DM Serif Display', serif;
-
-    z-index: 2;
-}
-
-.confirmar2 {
-    position: absolute;
-
-    top: 31vh;
-    left: 35vw;
-
-    font-size: 4.5vw;
-
-    color: #800020;
-
-    font-family: 'DM Serif Display', serif;
-
-    z-index: 2;
-}
-
-.subconfirmar {
-    position: absolute;
-
-    top: 48vh;
-    left: 15vw;
-
-    font-size: 2.2vw;
-
-    font-weight: bold;
-
-    color: #2c254f;
-
-    font-family: 'DM Serif Display', serif;
-
-    z-index: 2;
-}
-
-.subconfirmar2 {
-    position: absolute;
-
-    top: 55vh;
-    left: 25vw;
-
-    font-size: 2.2vw;
-
-    font-weight: bold;
-
-    color: #2c254f;
-
-    font-family: 'DM Serif Display', serif;
-
-    z-index: 2;
-}
-
-.botao_confirmar {
-    position: absolute;
-
-    top: 70vh;
-    left: 30vw;
-
-    font-size: 2.2vw;
-
-    font-weight: bold;
-
-    color: #efe4e4;
-
-    background-color: #44397a;
-
-    border: none;
-    border-radius: 25px;
-
-    width: 38vw;
-    height: 8vh;
-
-    padding: 1vh 1vw;
-
-    font-family: 'DM Serif Display', serif;
-
-    z-index: 2;
-
-    cursor: pointer;
-}
-
-
-/* =========================================
-   FINALIZAÇÃO
-========================================= */
-
-.finalizar {
-    position: absolute;
-
-    top: 30vh;
-    left: 10vw;
-
-    font-size: 4vw;
-
-    font-weight: bold;
-
-    color: #800020;
-
-    font-family: 'DM Serif Display', serif;
-
-    z-index: 2;
-}
-
-.finalizar_botao {
-    position: absolute;
-
-    top: 48vh;
-    left: 10vw;
-
-    font-size: 3.5vw;
-
-    font-weight: bold;
-
-    color: #FFFFFF;
-
-    background-color: #2c254f;
-
-    border: none;
-    border-radius: 39px;
-
-    padding: 2vh 5vw;
-
-    font-family: 'DM Serif Display', serif;
-
-    z-index: 2;
-
-    cursor: pointer;
-}
-
-.finalizar2 {
-    position: absolute;
-
-    top: 68vh;
-    left: 10vw;
-
-    font-size: 4vw;
-
-    font-weight: bold;
-
-    color: #800020;
-
-    font-family: 'DM Serif Display', serif;
-
-    z-index: 2;
-}
-
-
-/* =========================================
-   ESCOLHA DE TURNO
-========================================= */
-
-.turno {
-    position: absolute;
-
-    top: 25vh;
-    left: 8vw;
-
-    font-size: 5vw;
-
-    color: #800020;
-
-    font-family: 'DM Serif Display', serif;
-
-    z-index: 2;
-}
-
-.Manha {
-    position: absolute;
-
-    top: 42vh;
-    left: 10vw;
-
-    font-size: 2.8vw;
-
-    color: #efe4e4;
-
-    font-family: 'DM Serif Display', serif;
-
-    z-index: 2;
-
-    width: 20vw;
-    height: 9vh;
-
-    border: none;
-    border-radius: 65px;
-
-    background-color: #800020;
-
-    cursor: pointer;
-}
-
-.Tarde {
-    position: absolute;
-
-    top: 55vh;
-    left: 10vw;
-
-    font-size: 2.8vw;
-
-    color: #efe4e4;
-
-    font-family: 'DM Serif Display', serif;
-
-    z-index: 2;
-
-    width: 20vw;
-    height: 9vh;
-
-    border: none;
-    border-radius: 65px;
-
-    background-color: #44397a;
-
-    cursor: pointer;
-}
-
-.Noite {
-    position: absolute;
-
-    top: 68vh;
-    left: 10vw;
-
-    font-size: 2.8vw;
-
-    color: #efe4e4;
-
-    font-family: 'DM Serif Display', serif;
-
-    z-index: 2;
-
-    width: 20vw;
-    height: 9vh;
-
-    border: none;
-    border-radius: 65px;
-
-    background-color: #800020;
-
-    cursor: pointer;
-}
-
-
-/* =========================================
-   EFEITOS DOS BOTÕES
-========================================= */
-
-button {
-    transition: 0.2s;
-}
-
-button:hover {
-    opacity: 0.9;
-}
-
-button:active {
-    opacity: 0.8;
-}
-```
