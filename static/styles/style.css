@@ -113,8 +113,8 @@ body {
     font-family:'DM Serif Display',Georgia,serif;
     line-height:1.05; z-index:2;
 }
-.confirmar{top:20%;font-size:40px}
-.confirmar2{top:30%;font-size:44px}
+.confirmar{top:25%;font-size:30px}
+.confirmar2{top:35%;font-size:44px}
 
 .subconfirmar,.subconfirmar2 {
     position:absolute; left:10%;
@@ -125,10 +125,10 @@ body {
     font-size:21px; font-weight:bold;
     line-height:1.25; z-index:2;
 }
-.subconfirmar{top:20%}.subconfirmar2{top:25%}
+.subconfirmar{top:40%}.subconfirmar2{top:55%}
 
 .botao_confirmar {
-    position:absolute; top:55%; left:10%;
+    position:absolute; top:60%; left:25%;
     transform:translate(-50%,-50%);
     width:50%; min-height:58px; padding:10px;
     border:none; border-radius:25px;
@@ -142,12 +142,12 @@ body {
     position:absolute; top:25%; left:35%;
     transform:translateX(-50%);
     width:90%; text-align:center;
-    font-size:25px; font-weight:bold;
+    font-size:35px; font-weight:bold;
     line-height:1.15; color:#800020;
     font-family:'DM Serif Display',Georgia,serif; z-index:2;
 }
 .finalizar_botao {
-    position:absolute; top:44%; left:40%;
+    position:absolute; top:44%; left:30%;
     transform:translate(-50%,-50%);
     width:52%; min-height:72px; padding:12px 20px;
     border:none; border-radius:35px;
@@ -157,7 +157,7 @@ body {
     cursor:pointer; z-index:3;
 }
 .finalizar2 {
-    position:absolute; top:60%; left:25%;
+    position:absolute; top:60%; left:35%;
     transform:translateX(-50%);
     width:50%; text-align:center;
     font-size:20px; font-weight:bold;
@@ -166,7 +166,7 @@ body {
 }
 
 .turno {
-    position:absolute; top:25%; left:10%;
+    position:absolute; top:25%; left:20%;
     transform:translateX(-50%);
     width:95%; text-align:center;
     font-size:48px; line-height:1;
@@ -174,17 +174,17 @@ body {
     font-family:'DM Serif Display',Georgia,serif; z-index:2;
 }
 .Manha,.Tarde,.Noite {
-    position:absolute; left: 10%;
+    position:absolute; left: 15%;
     transform:translateX(-50%);
-    width:200px; height:65px;
+    width:200px; height:50px;
     border:none; border-radius:65px;
-    color:#efe4e4; font-size:30px;
+    color:#efe4e4; font-size:25px;
     font-family:'DM Serif Display',Georgia,serif;
     cursor:pointer; z-index:3;
 }
-.Manha{top:40%;background:#800020}
-.Tarde{top:52%;background:#44397a}
-.Noite{top:64%;background:#800020}
+.Manha{top:45%;background:#800020}
+.Tarde{top:57%;background:#44397a}
+.Noite{top:69%;background:#800020}
 
 .tabela {
     position:absolute; top:50%; left:50%;
